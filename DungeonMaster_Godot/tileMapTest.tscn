@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://basic_tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://GridContainer.gd" type="Script" id=2]
+
+[sub_resource type="GDScript" id=1]
+
+[node name="main" type="Node2D"]
+
+[node name="map" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0, 65536, 1, 0, 65551, 1, 0, 131072, 1, 0, 131087, 1, 0, 196608, 1, 0, 196623, 1, 0, 262144, 1, 0, 262159, 1, 0, 327680, 1, 0, 327695, 1, 0, 393216, 1, 0, 393231, 1, 0, 458752, 1, 0, 458767, 1, 0, 524288, 1, 0, 524289, 1, 0, 524290, 1, 0, 524291, 1, 0, 524292, 1, 0, 524293, 1, 0, 524294, 1, 0, 524295, 1, 0, 524296, 1, 0, 524297, 1, 0, 524298, 1, 0, 524299, 1, 0, 524300, 1, 0, 524301, 1, 0, 524302, 1, 0, 524303, 1, 0 )
+script = SubResource( 1 )
+
+[node name="info" type="Label" parent="."]
+margin_right = 192.0
+margin_bottom = 64.0
+align = 1
+valign = 1
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_left = 832.0
+margin_right = 1000.0
+margin_bottom = 256.0
+script = ExtResource( 2 )
+
